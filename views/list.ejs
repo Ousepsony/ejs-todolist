@@ -1,0 +1,28 @@
+<%- include("header") -%> 
+
+
+<div class="box"> 
+    <h1 id="heading"> <%= EJSday %></h1>
+</div>
+        
+
+        <div class="box">
+
+
+            <% for( let i = 0; i < EJSitems.length; i++ ) { %>
+                <div class="item">
+                    <input type="checkbox" name="" id="">
+                    <p> <%= EJSitems[i] %> </p>
+                </div>
+            <%} %>
+            <form id="listForm" action="/" method="post">
+                <input type="text" name="inputText" id="inputText" placeholder="New item" autocomplete="off"> 
+                <button type= "submit" id="submitBtn" name="listType" value= <%= EJSlistTitle %> > +</button>
+                <button type="submit" id="resetBtn" name="Reset" value=<%= EJSlistTitle %>>Clear</button>
+            </form>
+
+        </div>
+
+
+        
+<%- include("footer") -%> 
